@@ -1,0 +1,15 @@
+cd hadoop/sbin
+
+start-all.sh
+
+jps
+
+hadoop fs -mkdir assi12
+
+hadoop fs -mkdir assi12/input
+
+hadoop fs -put input.txt assi12/input
+
+hadoop jar /path/to/jar wordcount assi12/input assi12/output
+
+hadoop fs -cat assi12/output/*
