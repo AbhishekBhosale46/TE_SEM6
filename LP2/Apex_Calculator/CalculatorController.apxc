@@ -1,0 +1,12 @@
+public class CalculatorController {
+    
+    public Double num1 { get; set; }
+    public Double num2 { get; set; }
+    public Double result { get; set; }
+    public string operator { get; set; }
+    
+    public void calculate(){
+        result = Calculator.calculate(num1, num2, operator);
+    }
+   
+}

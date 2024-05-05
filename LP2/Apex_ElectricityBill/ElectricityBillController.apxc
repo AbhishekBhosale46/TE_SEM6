@@ -1,0 +1,8 @@
+public class ElectricityBillController {
+    public Integer units {get; set;}
+    public Integer bill {get; set;}
+    
+    public void generateBill(){
+        bill = ElectricityBill.getBill(units);
+    }
+}

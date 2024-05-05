@@ -1,0 +1,18 @@
+public class ElectricityBill {
+    public static Integer getBill(Integer units){
+        Integer totalBill = 0;
+        Integer rate1 = 3;
+        Integer rate2 = 5;
+        Integer rate3 = 8;
+        if(units<=100){
+            totalBill += rate1*units;
+        }
+        else if(units<=200){
+            totalBill += ((units-100)*rate2 + (100*rate1));
+        }
+        else{
+            totalBill += ((units-200)*rate3 + (100*rate1) + (100*rate2));
+        }
+        return totalBill;
+    }
+}

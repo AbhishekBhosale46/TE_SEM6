@@ -1,0 +1,21 @@
+public class StudentMarksheet {
+	
+    public static string getResult(integer physics, integer chemistry, integer maths){
+        integer percentage = (physics + chemistry + maths)/3;
+        string result = null;
+        if(percentage>80){
+            result = 'Pass Grade A';
+        }
+        else if(percentage>60){
+            result = 'Pass Grade B';
+        }
+        else if(percentage>40){
+            result = 'Pass Grade C';
+        }
+        else {
+            result = 'Fail';
+        }
+        return result;
+    }
+    
+}

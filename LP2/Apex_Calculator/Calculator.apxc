@@ -1,0 +1,35 @@
+public class Calculator {
+  	
+    public static Double add(Double num1, Double num2){
+        return num1+num2;
+    }
+    
+    public static Double sub(Double num1, Double num2){
+        return num1-num2;
+    }
+    
+    public static Double multiply(Double num1, Double num2){
+        return num1*num2;
+    }
+    
+    public static Double division(Double num1, Double num2){
+        return num1/num2;
+    }
+    
+    public static Double calculate(Double num1, Double num2, String operator){
+        Double result = null;
+        if(operator=='+'){
+            result = add(num1, num2);
+        }
+        else if(operator=='-'){
+			result = sub(num1, num2);
+        }
+        else if(operator=='*'){
+			result = multiply(num1, num2);
+        }
+        else if(operator=='/'){
+			result = division(num1, num2);
+        }
+       	return result;
+    }
+}

@@ -1,0 +1,22 @@
+<apex:page controller="ElectricityBillController">
+    
+    <apex:form >
+    	
+        <apex:pageBlock title="Electricity Bill Generator">
+        	
+            0-100 Units : 3rs per unit <br/><br/>
+            100-200 Units : 5rs per unit <br/><br/>
+            
+            Enter consumed units : <apex:inputText value="{!units}"/><br/><br/>
+            
+            <apex:commandButton action="{!generateBill}" value="Generate Bill"/><br/><br/>
+            
+            <apex:outputPanel rendered="{!bill != null}">
+            	Total Bill : {!bill}
+            </apex:outputPanel>
+            
+        </apex:pageBlock>
+    
+    </apex:form>
+    
+</apex:page>

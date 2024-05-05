@@ -1,0 +1,10 @@
+public class StudentMarksheetController {
+    public Integer physics {get; set;}
+    public Integer chemistry {get; set;}
+    public Integer maths {get; set;}
+    public string result {get; set;}
+    
+    public void evaluate(){
+        result = StudentMarksheet.getResult(physics, chemistry, maths);
+    }
+}

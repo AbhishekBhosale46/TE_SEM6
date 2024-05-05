@@ -1,0 +1,18 @@
+<apex:page controller="StudentMarksheetController">
+    <apex:form>
+    	<apex:pageBlock title="Student Marksheet">
+            
+            Enter marks for the below subjects : <br/><br/>
+            Physics : <apex:inputText value="{!physics}"/><br/>
+            Chemistry : <apex:inputText value="{!chemistry}"/><br/>
+            Maths : <apex:inputText value="{!maths}"/><br/><br/>
+            
+            <apex:commandButton value="Evaluate" action="{!evaluate}"/><br/><br/>
+            
+            <apex:outputPanel rendered="{!result != null}">
+            	Remarks : {!result}
+            </apex:outputPanel>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

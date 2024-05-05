@@ -1,0 +1,26 @@
+<apex:page controller="CalculatorController">
+    <apex:form>
+    	<apex:pageBlock title="Calculator">
+            
+            Enter the numbers:<br/><br/>
+            
+            Number 1:<apex:inputText value="{!num1}"/><br/>
+            Number 2:<apex:inputText value="{!num2}"/><br/>
+            
+            Select Operator:<br/><br/>
+            <apex:selectList value="{!operator}" size="1">
+                <apex:selectOption itemValue="+" itemLabel="Addition"/>
+                <apex:selectOption itemValue="-" itemLabel="Subtraction"/>
+                <apex:selectOption itemValue="*" itemLabel="Multiplication"/>
+                <apex:selectOption itemValue="/" itemLabel="Division"/>
+            </apex:selectList><br/><br/>
+            
+            <apex:commandButton value="Calculate" action="{!calculate}"/><br/><br/>
+            
+            <apex:outputPanel rendered="{!result != null}">
+            	Result: {!result}
+            </apex:outputPanel>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
